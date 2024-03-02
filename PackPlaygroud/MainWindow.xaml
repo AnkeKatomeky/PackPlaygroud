@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PackPlaygroud.View"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <StackPanel Orientation="Horizontal">
-        <local:PackControl Margin="8" x:Name="Pack1"/>
-        <local:PackControl Margin="8" x:Name="Pack2"/>
-        <local:PackControl Margin="8" x:Name="Pack3"/>
+        Title="MainWindow" Height="600" Width="800">
+    <StackPanel Background="CornflowerBlue" Orientation="Horizontal">
+        <!--Пример как ставить услугу с размерами-->
+        <local:PackControl Height="400" Width="300" Margin="8" x:Name="Pack1"/>
+        <!--Пример как ставить пак-->
+        <local:PackControlExtend Height="400" Width="300" Margin="8" x:Name="Pack2"/>
     </StackPanel>
 </Window>

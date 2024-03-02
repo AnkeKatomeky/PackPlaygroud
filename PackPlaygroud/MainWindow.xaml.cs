@@ -21,16 +21,11 @@ namespace PackPlaygroud
     /// </summary>
     public partial class MainWindow : Window
     {
-        public PackContainer PackContainer1 { get; set; }
-        public PackContainer PackContainer2 { get; set; }
-        public PackContainer PackContainer3 { get; set; }
+        public PackContainer Starter { get; set; }
+        public PackContainer Recolor { get; set; }
 
         public MainWindow()
         {
-            //var gem = new ImageSourceConverter().ConvertFromString("pack://application:,,,/PackPlaygroud;/Assets/Gem.png") as ImageSource;
-            //var chest = new ImageSourceConverter().ConvertFromString("pack://application:,,,/PackPlaygroud;/Assets/Chest.png") as ImageSource;
-            //var pallet = new ImageSourceConverter().ConvertFromString("pack://application:,,,/PackPlaygroud;/Assets/Pallet.png") as ImageSource;
-
             var gem = new BitmapImage(new Uri(@"Assets/Gem.png", UriKind.Relative));
             var chest = new BitmapImage(new Uri(@"Assets/Chest.png", UriKind.Relative));
             var pallet = new BitmapImage(new Uri(@"Assets/Pallet.png", UriKind.Relative));
@@ -44,7 +39,7 @@ namespace PackPlaygroud
                 new(){ Icon = gem, Name = "Qwe", Quantity = 2},
             };
 
-            PackContainer1 = new PackContainer()
+            Starter = new PackContainer()
             {
                 Name = "Стартовый набор",
                 Cost = 120,
@@ -52,26 +47,17 @@ namespace PackPlaygroud
                 PackItems = itemList
             };
 
-            PackContainer2 = new PackContainer()
+            Recolor = new PackContainer()
             {
-                Name = "Набор красок",
+                Name = "Перекрасить",
                 Cost = 370,
                 Icon = pallet,
                 PackItems = itemList
             };
-
-            PackContainer3 = new PackContainer()
-            {
-                Name = "Продвинутый набор",
-                Cost = 790,
-                Icon = chest,
-                PackItems = itemList
-            };
-
+            
             InitializeComponent();
-            Pack1.Pack = PackContainer1;
-            Pack2.Pack = PackContainer2;
-            Pack3.Pack = PackContainer3;
+            Pack1.Pack = Recolor;
+            Pack2.Pack = Starter;
         }
     }
 }

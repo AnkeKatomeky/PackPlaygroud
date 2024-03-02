@@ -9,16 +9,22 @@
 
   <ItemGroup>
     <None Remove="Assets\Chest.png" />
+    <None Remove="Assets\Chest1.png" />
     <None Remove="Assets\Coin.png" />
     <None Remove="Assets\Gem.png" />
     <None Remove="Assets\Pallet.png" />
+    <None Remove="Assets\Pallet1.png" />
+    <None Remove="Assets\Separator.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Assets\Chest.png" />
+    <Resource Include="Assets\Chest1.png" />
     <Resource Include="Assets\Coin.png" />
     <Resource Include="Assets\Gem.png" />
     <Resource Include="Assets\Pallet.png" />
+    <Resource Include="Assets\Pallet1.png" />
+    <Resource Include="Assets\Separator.png" />
   </ItemGroup>
 
 </Project>

@@ -8,79 +8,48 @@
              d:Background="White"
              d:DesignHeight="400" d:DesignWidth="300">
 
-    <UserControl.Resources>
-        <Style TargetType="Button" x:Key="RoundButton">
-            <Style.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="32" />
-                </Style>
-            </Style.Resources>
-        </Style>
-    </UserControl.Resources>
-
-    <Border Background="#1d2126" BorderBrush="Black" CornerRadius="32" BorderThickness="1">
+    <!--Background = цвет фона плитки; CornerRadius = степерь заварота углов в пикселях-->
+    <Border Background="#C40E0E0E" BorderBrush="Black" CornerRadius="78" BorderThickness="1">
         <StackPanel>
+            <!--Height/Width = высота/ширина картинки сундука; Source = картинка сундука-->
             <Image Margin="26" 
                    Height="192" 
                    Width="192" 
-                   Source="../Assets/Chest.png">
-                <Image.ToolTip>
-                    <ToolTip Background="Transparent" BorderBrush="Transparent">
-                        <Border Background="#1d2126" BorderBrush="Black" CornerRadius="32" BorderThickness="1">
-                            <ListBox Margin="16" ItemsSource="{Binding Pack.PackItems}" HorizontalContentAlignment="Stretch" Background="Transparent" BorderBrush="Transparent">
-                                <ListBox.ItemTemplate>
-                                    <DataTemplate>
-                                        <DockPanel Margin="8" HorizontalAlignment="Stretch">
-                                            <Image DockPanel.Dock="Left" 
-                                               Source="../Assets/Gem.png" 
-                                               Width="64" 
-                                               Height="64"/>
-                                            <TextBlock DockPanel.Dock="Left" 
-                                                   TextAlignment="Center" 
-                                                   VerticalAlignment="Center"
-                                                   HorizontalAlignment="Left"
-                                                   Foreground="Green"
-                                                   FontSize="18"
-                                                   Margin="12"
-                                                   Text="{Binding Name}"/>
-                                            <TextBlock DockPanel.Dock="Right"
-                                                   TextAlignment="Center" 
-                                                   VerticalAlignment="Center"
-                                                   HorizontalAlignment="Right"
-                                                   Foreground="Green"
-                                                   FontSize="18"
-                                                   Margin="12"
-                                                   Text="{Binding Quantity}"/>
-                                        </DockPanel>
-                                    </DataTemplate>
-                                </ListBox.ItemTemplate>
-                            </ListBox>
-                        </Border>
-                    </ToolTip>
-                </Image.ToolTip>
+                   Source="../Assets/Pallet.png">
             </Image>
+            <!--Название пака Foreground = цвет текста FontSize = размер шрифта Text = сам текст-->
             <TextBlock TextAlignment="Center" 
-                       Foreground="Green"
+                       Foreground="#fff500"
                        FontSize="26"
                        Text="{Binding Pack.Name}"/>
+            <!--Background = фон картинки(первые 2 это прозрачность) Margin = отступы с 4 сторон-->
             <Button Margin="26" 
-                    Background="#343e40"
+                    Background="#1434D399"
                     Click="ButtonBase_OnClick"
-                    Style="{DynamicResource RoundButton}"
                     HorizontalContentAlignment="Stretch">
-                <DockPanel Margin="8">
-                    <TextBlock TextAlignment="Center" 
-                               DockPanel.Dock="Left"
+                <Button.Style>
+                    <Style>
+                        <Style.Resources>
+                            <Style TargetType="Border">
+                                <!--Value = степерь закругления кнопки-->
+                                <Setter Property="CornerRadius" Value="8" />
+                            </Style>
+                        </Style.Resources>
+                    </Style>
+                </Button.Style>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="8">
+                    <!--Стоймость Foreground = цвет текста FontSize = размер шрифта Text = сам текст-->
+                    <TextBlock TextAlignment="Center"
                                VerticalAlignment="Center"
-                               Foreground="Cyan"
-                               FontSize="16"
-                               Margin="8"
+                               Foreground="#34D399"
+                               FontSize="24"
+                               Margin="0 0 8 0"
                                Text="{Binding Pack.Cost}"/>
-                    <Image DockPanel.Dock="Right" 
-                           Height="32" 
+                    <!--Height/Width = высота/ширина картинки монетки; Source = картинка монетки-->
+                    <Image Height="32" 
                            Width="32" 
                            Source="../Assets/Coin.png" />
-                </DockPanel>
+                </StackPanel>
             </Button>
         </StackPanel>
     </Border>
