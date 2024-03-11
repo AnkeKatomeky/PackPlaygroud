@@ -7,9 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="800">
     <StackPanel Background="CornflowerBlue" Orientation="Horizontal">
+        <local:PayCheckControl Width="600"/>
         <!--Пример как ставить услугу с размерами-->
-        <local:PackControl Height="400" Width="300" Margin="8" x:Name="Pack1"/>
+        <!--<local:PackControl Height="400" Width="300" Margin="8" x:Name="Pack1"/>-->
         <!--Пример как ставить пак-->
-        <local:PackControlExtend Height="400" Width="300" Margin="8" x:Name="Pack2"/>
+        <!--<local:PackControlExtend  Height="400" Width="300" Margin="8" x:Name="Pack2"/>-->
+
+
     </StackPanel>
 </Window>

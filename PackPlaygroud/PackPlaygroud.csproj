@@ -8,23 +8,33 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Binance.bmp" />
     <None Remove="Assets\Chest.png" />
     <None Remove="Assets\Chest1.png" />
     <None Remove="Assets\Coin.png" />
     <None Remove="Assets\Gem.png" />
     <None Remove="Assets\Pallet.png" />
     <None Remove="Assets\Pallet1.png" />
+    <None Remove="Assets\primepayments.png" />
     <None Remove="Assets\Separator.png" />
+    <None Remove="Assets\Stripe.bmp" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Binance.bmp" />
     <Resource Include="Assets\Chest.png" />
     <Resource Include="Assets\Chest1.png" />
     <Resource Include="Assets\Coin.png" />
     <Resource Include="Assets\Gem.png" />
     <Resource Include="Assets\Pallet.png" />
     <Resource Include="Assets\Pallet1.png" />
+    <Resource Include="Assets\primepayments.png" />
     <Resource Include="Assets\Separator.png" />
+    <Resource Include="Assets\Stripe.bmp" />
   </ItemGroup>
 
 </Project>

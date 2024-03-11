@@ -56,8 +56,8 @@ namespace PackPlaygroud
             };
             
             InitializeComponent();
-            Pack1.Pack = Recolor;
-            Pack2.Pack = Starter;
+            //Pack1.Pack = Recolor;
+            //Pack2.Pack = Starter;
         }
     }
 }
